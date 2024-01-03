@@ -24,7 +24,7 @@ jobs:
       with:
         task-definition: task-definition.json
         container-name: Go
-        image: williamliberos/go_ci:Projeto_inicial
+        image: williamliberos/go_ci:${{github.run_number}}
         environment_variables: | 
           HOST=${{ secrets.DBHOST }}
           USER=${{ secrets.DBUSER }}
