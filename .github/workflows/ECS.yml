@@ -26,11 +26,11 @@ jobs:
         container-name: Go
         image: williamliberos/go_ci:${{github.run_number}}
         environment_variables: | 
-          HOST=${{ secrets.DBHOST }}
-          USER=${{ secrets.DBUSER }}
-          PASSWORD=${{ secrets.DBPASSWORD }}
-          DBNAME=${{ secrets.DBNAME }}
-          DBPORT=${{ secrets.DBPORT }}
+          HOST=api-go-dev.cj4yk0oyyjzi.us-east-2.rds.amazonaws.com
+          USER=postgres
+          PASSWORD=123456789
+          DBNAME=root
+          DBPORT=5432
           PORT=8000
 
     - name: Deploy Amazon ECS task definition
