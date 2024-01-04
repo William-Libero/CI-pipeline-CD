@@ -72,6 +72,6 @@ jobs:
 
   LoadTest:
     needs: docker
-    if: ${{ github.ref_name == "Projeto_inicial" }}
+    if: ${{ github.ref_name == 'Projeto_inicial' }}
     uses: ./.github/workflows/LoadTest.yml
     secrets: inherit
